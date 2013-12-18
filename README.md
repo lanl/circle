@@ -30,7 +30,7 @@ Installation
 
 You'll need to download and install Libcircle, which is available from https://github.com/hpc/libcircle.  After that,
 
-    go install https://github.com/losalamos/circle
+    go get github.com/losalamos/circle
 
 ought to work.
 
@@ -39,7 +39,7 @@ License
 
 Circle is provided under a BSD-ish license with a "modifications must be indicated" clause.  See [the LICENSE file](http://github.com/losalamos/circle/blob/master/LICENSE.md) for the full text.
 
-Circle is part of the _LANL Go Suite_, LA-CC-11-056.
+Circle is part of the [LANL Go Suite](http://www.lanl.gov/projects/feynman-center/technologies/software/lanl%20go%20suite.php), LA-CC-11-056.
 
 Author
 ------
