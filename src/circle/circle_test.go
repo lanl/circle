@@ -37,7 +37,6 @@ func Example() {
 	rank = circle.Initialize()
 	defer circle.Finalize()
 	circle.EnableLogging(circle.LogErr) // Make libcircle a little quieter than normal.
-	circle.MaxWorkItemLength = 50       // We know a priori we're enqueueing strings shorter than this.
 
 	// Contrast the output when the following is uncommented (and
 	// multiple MPI processes are used).

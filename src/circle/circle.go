@@ -41,10 +41,8 @@ import (
 	"unsafe"
 )
 
-// We don't know a priori how much space to allocate to store a
-// dequeued work item.  Set MaxWorkItemLength larger than the largest
-// item you expect to dequeue.
-var MaxWorkItemLength int = 1 << 20 // This size "ought to be enough for anybody".
+// MaxWorkItemLength is the maximum length of a work-item string.
+const MaxWorkItemLength int = C.CIRCLE_MAX_STRING_LEN;
 
 // A Handle provides an interface to enqueue and dequeue libcircle work items.
 type Handle interface {
@@ -72,14 +70,10 @@ func (q queue) Enqueue(work string) (ok bool) {
 // Dequeue a work item (a user-defined string) from a queue.  Return
 // it plus a success code.
 func (q queue) Dequeue() (str string, ok bool) {
-	// This is obnoxious -- we don't know how large of a string to
-	// allocate.  Allocate something fairly large and hope for the
-	// best.
+	// Dequeue the work item into a fixed-size string and return it.
 	buffer := make([]byte, MaxWorkItemLength)
 	cstr := C.CString(string(buffer))
 	defer C.free(unsafe.Pointer(cstr))
-
-	// Dequeue the work item into the string, and return it.
 	if ok = C.invoke_queue_func(q.handle.dequeue, cstr) >= 0; ok {
 		str = C.GoString(cstr)
 	}
