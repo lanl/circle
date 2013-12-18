@@ -28,11 +28,27 @@ Circle provides a Go interface to Libcircle:
 Installation
 ------------
 
-You'll need to download and install Libcircle, which is available from https://github.com/hpc/libcircle.  After that,
+You'll need to download and install Libcircle, which is available from <https://github.com/hpc/libcircle>.  After that,
 
     go get github.com/losalamos/circle
 
 ought to work.
+
+Documentation
+-------------
+
+Pre-built documentation for the Circle API is available online at <http://godoc.org/github.com/losalamos/circle>, courtesy of [GoDoc](http://godoc.org/).
+
+Once you install Circle, you can view the API locally with [`godoc`](http://godoc.org/code.google.com/p/go.tools/cmd/godoc), for example by running
+
+    godoc github.com/losalamos/circle
+
+to display the Goop documentation on screen or by running
+
+    cd $GOPATH
+    godoc -http=:6060
+
+to start a local Web server then viewing the HTML-formatted documentation at <http://localhost:6060/pkg/github.com/losalamos/circle/> in your favorite browser.
 
 License
 -------

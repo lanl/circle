@@ -3,9 +3,9 @@
 package circle_test
 
 import (
-	"circle"
 	"encoding/json"
 	"fmt"
+	"github.com/losalamos/circle"
 	"log"
 )
 

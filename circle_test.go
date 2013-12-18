@@ -2,8 +2,8 @@
 package circle_test
 
 import (
-	"circle"
 	"fmt"
+	"github.com/losalamos/circle"
 )
 
 var rank int // Our process's MPI rank
