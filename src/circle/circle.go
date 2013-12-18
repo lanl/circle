@@ -42,7 +42,7 @@ import (
 )
 
 // MaxWorkItemLength is the maximum length of a work-item string.
-const MaxWorkItemLength int = C.CIRCLE_MAX_STRING_LEN;
+const MaxWorkItemLength int = C.CIRCLE_MAX_STRING_LEN - 1
 
 // A Handle provides an interface to enqueue and dequeue libcircle work items.
 type Handle interface {
