@@ -3,7 +3,7 @@ package circle_test
 
 import (
 	"fmt"
-	"github.com/losalamos/circle"
+	"github.com/lanl/circle"
 )
 
 var rank int // Our process's MPI rank

@@ -5,7 +5,7 @@ package circle_test
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/losalamos/circle"
+	"github.com/lanl/circle"
 	"log"
 )
 

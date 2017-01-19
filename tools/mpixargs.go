@@ -6,7 +6,7 @@ package main
 
 import (
 	"bufio"
-	"github.com/losalamos/circle"
+	"github.com/lanl/circle"
 	"log"
 	"os"
 	"os/exec"
