@@ -29,33 +29,30 @@ Installation
 ------------
 
 You'll need to download and install Libcircle, which is available from <https://github.com/hpc/libcircle>.  After that,
-
-    go get github.com/lanl/circle
-
-ought to work.
+```bash
+go mod tidy
+```
+ought to work for any program that includes an
+```Go
+import "github.com/lanl/circle"
+```
 
 Documentation
 -------------
 
-Pre-built documentation for the Circle API is available online at <http://godoc.org/github.com/lanl/circle>, courtesy of [GoDoc](http://godoc.org/).
+Pre-built documentation for the Circle API is available online at <https://pkg.go.dev/github.com/lanl/circle>.
 
-Once you install Circle, you can view the API locally with [`godoc`](http://godoc.org/code.google.com/p/go.tools/cmd/godoc), for example by running
+Legal statement
+---------------
 
-    godoc github.com/lanl/circle
+Copyright © 2011, Triad National Security, LLC
+All rights reserved.
 
-to display the Goop documentation on screen or by running
-
-    cd $GOPATH
-    godoc -http=:6060
-
-to start a local Web server then viewing the HTML-formatted documentation at <http://localhost:6060/pkg/github.com/lanl/circle/> in your favorite browser.
-
-License
--------
+This software was produced under U.S. Government contract 89233218CNA000001 for Los Alamos National Laboratory (LANL), which is operated by Triad National Security, LLC for the U.S. Department of Energy/National Nuclear Security Administration.  All rights in the program are reserved by Triad National Security, LLC, and the U.S. Department of Energy/National Nuclear Security Administration. The Government is granted for itself and others acting on its behalf a nonexclusive, paid-up, irrevocable worldwide license in this material to reproduce, prepare derivative works, distribute copies to the public, perform publicly and display publicly, and to permit others to do so.  NEITHER THE GOVERNMENT NOR TRIAD NATIONAL SECURITY, LLC MAKES ANY WARRANTY, EXPRESS OR IMPLIED, OR ASSUMES ANY LIABILITY FOR THE USE OF THIS SOFTWARE.  If software is modified to produce derivative works, such modified software should be clearly marked, so as not to confuse it with the version available from LANL.
 
 Circle is provided under a BSD-ish license with a "modifications must be indicated" clause.  See [the LICENSE file](http://github.com/lanl/circle/blob/master/LICENSE.md) for the full text.
 
-Circle is part of the [LANL Go Suite](http://www.lanl.gov/projects/feynman-center/technologies/software/lanl%20go%20suite.php), LA-CC-11-056.
+Circle is part of the LANL Go Suite, identified internally by LANL as LA-CC-11-056.
 
 Author
 ------
