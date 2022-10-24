@@ -1,6 +1,8 @@
 Circle
 ======
 
+[![Go Reference](https://pkg.go.dev/badge/github.com/lanl/circle.svg)](https://pkg.go.dev/github.com/lanl/circle) [![Go Report Card](https://goreportcard.com/badge/github.com/lanl/circle)](https://goreportcard.com/report/github.com/lanl/circle)
+
 Description
 -----------
 
